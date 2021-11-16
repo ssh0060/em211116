@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> 송세희 - attr tab </title>
+    <script src="./script/jquery-1.11.3.js"></script>
+    <script>
+        // 이미지 속성 선택하여 텝 메뉴 제작하기 : 각각의 btn 클릭시 img 속성(src) 변경 
+        $(function(){
+            $(".btn1").on("click",function(){
+               $(".frame img").attr({"src":"./images/01_responsive.jpg","alt":"반응형목업"})
+            });
+            $(".btn2").on("click",function(){
+               $(".frame img").attr({"src":"./images/02_logo.jpg","alt":"카멜레온목업"})
+            });
+            $(".btn3").on("click",function(){
+               $(".frame img").attr({"src":"./images/03_em1.jpg","alt":"엄진1"})
+            });
+            $(".btn4").on("click",function(){
+               $(".frame img").attr({"src":"./images/04_em2.jpg","alt":"엄진2"})
+            });
+            $(".btn5").on("click",function(){
+               $(".frame img").attr({"src":"./images/05_em3.jpg","alt":"엄진3"})
+            });
+           
+        });
+
+    </script>
+    <style>
+        * {margin: 0; padding: 0;}
+        ul,li {margin: 0; padding: 0; list-style: none;}
+        body {background: #dedede;}
+        #pf {position: absolute; top: 50%; left: 50%; transform:translate(-50%, -50%);}
+        #pf ul {display: flex; justify-content: space-between;}
+        #pf ul li a {background: #000; font-size:14px; text-decoration: none;
+        color:#fff; width: 135px; height: 20px; padding: 20px 0 10px 0; 
+        display: block; text-align: center; border-top-left-radius: 10px;
+        border-top-right-radius: 10px; }
+        #pf ul li a:hover {background: #999;}
+        #pf ul li a:focus {background: rgb(121, 119, 119);}
+        #pf .frame img{border:1px solid #000; width: 700px; height: 500px;}
+    </style>
+</head>
+<body>
+    <div id="pf">
+        <div class="menu">
+            <!-- ul>li*5>a.btn${폿폴명} -->
+            <ul>
+                <li><a href="#" class="btn1">반응형</a></li>
+                <li><a href="#" class="btn2">로고</a></li>
+                <li><a href="#" class="btn3">엄진1</a></li>
+                <li><a href="#" class="btn4">엄진2</a></li>
+                <li><a href="#" class="btn5">엄진3</a></li>
+            </ul>
+        </div>
+        <div class="frame">
+            <a href="#"><img src="./images/01_responsive.jpg" alt="반응형로고"></a>
+        </div>
+    </div>
+</body>
+</html>
